@@ -1,0 +1,28 @@
+package seleniumSessions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class MouseHoverWindowHandling 
+{
+
+	@Test
+	public void mouseHoverWindowHandling() {
+		System.setProperty("webdriver.chrome.driver", ".\\BrowserDrivers\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.naukri.com/");
+		
+		//Finding About Companies element and clicking
+		driver.findElement(By.xpath("//div[@class='subMenu']//a[contains(text(), 'About Companies')]")).click();
+		
+		//Finding Company Name search box and entering TCS in that
+		driver.findElement(By.name("CompanyName")).sendKeys("TCS");
+		
+		Thread.sleep(3000);
+		//Note: driver.close() is responsible to close the current focused window
+	}
+	
+}

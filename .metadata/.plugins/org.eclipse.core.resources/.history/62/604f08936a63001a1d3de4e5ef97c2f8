@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class SmallestandLargestWordinSentence {
+
+	public static void main(String[] args) {
+		
+		Scanner scn=new Scanner(System.in);
+		System.out.println("Enter a Sentence to find Smallest and Largest words");
+		String sentence=scn.next();
+		
+		System.out.println(sentence.charAt(2));
+
+	}
+
+}

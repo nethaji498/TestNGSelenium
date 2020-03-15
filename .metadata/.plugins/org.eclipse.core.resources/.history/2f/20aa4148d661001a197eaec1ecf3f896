@@ -1,0 +1,31 @@
+package practicePrograms;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
+
+public class Facebook {
+
+	@Test
+	public void faceboolLogin() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", ".\\BrowserDrivers\\chromedriver.exe");
+		
+		ChromeOptions co=new ChromeOptions();
+		co.setHeadless(true);
+		
+		WebDriver driver=new ChromeDriver(co);
+		
+		driver.get("https://login.salesforce.com/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("UserName");
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getPageSource());
+		System.out.println(driver.getCurrentUrl());
+		driver.close();
+		
+	
+		
+	}
+}

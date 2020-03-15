@@ -1,0 +1,20 @@
+package DateClass;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateClass {
+
+	public static void main(String[] args) {
+		
+		Date d=new Date(); //Date Class from util package
+		System.out.println(d.toString());
+		
+		SimpleDateFormat sdf=new SimpleDateFormat("M/dd/yyyy");
+		System.out.println(sdf.format(d));
+		
+		
+
+	}
+
+}

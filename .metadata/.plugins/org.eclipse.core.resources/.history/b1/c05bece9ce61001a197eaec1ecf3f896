@@ -1,0 +1,26 @@
+package practicePrograms;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
+
+public class Facebook {
+
+	@Test
+	public void faceboolLogin() {
+		System.setProperty("webdriver.chrome.driver", ".\\BrowserDrivers\\chromedriver.exe");
+		
+//		ChromeOptions co=new ChromeOptions();
+//		co.setHeadless(true);
+		
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("https://www.salesforce.com/");
+		
+		driver.findElement(By.linkText("//a[@href='https://login.salesforce.com/']")).click();
+		driver.findElement(By.id("//input[@id='username']")).sendKeys("UserName");
+		
+	}
+}
