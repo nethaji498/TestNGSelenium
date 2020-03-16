@@ -53,4 +53,6 @@
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
     <fullyQualifiedTypeName name="com.codoid.products.fillo.Fillo"/>
+    <fullyQualifiedTypeName name="coreJava.ParentDemo"/>
+    <fullyQualifiedTypeName name="coreJava.ChildDemo"/>
 </qualifiedTypeNameHistroy>
